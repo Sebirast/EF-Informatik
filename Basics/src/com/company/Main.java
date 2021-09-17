@@ -1,5 +1,7 @@
 package com.company;
 
+import com.sun.deploy.util.StringUtils;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -29,15 +31,13 @@ public class Main {
 
     public static String dezInHexa(int input){
         int devisor = 16;
-        int a = 16;
         int interResult;
         String result = "";
 
         char[] hexCharacters = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
         if(devisor > input){
-            input = devisor;
-            devisor = a;
+            return String.valueOf(hexCharacters[input]);
         }
 
         do{
@@ -47,7 +47,9 @@ public class Main {
 
         }while(input != 0);
 
-        return result;
+        StringBuilder output = new StringBuilder(result).reverse();
+
+        return output.toString();
     }
 
     public static int binInDez(byte[] input){
@@ -62,10 +64,14 @@ public class Main {
         return result;
     }
 
+    public static byte[] dezToBinFloat(float input){
+       int whole =
+    }
+
     public static void main(String[] args) {
-        // System.out.println(dezInBin(75, 2));
-        // byte[] a = {1,0,1};
-        // System.out.println(binInDez(a));
-        System.out.println(dezInHexa(15));
+//        System.out.println(dezInBin(75, 16));
+//        byte[] a = {1,0,1};
+//        System.out.println(binInDez(a));
+        System.out.println(dezInHexa(100000));
     }
 }

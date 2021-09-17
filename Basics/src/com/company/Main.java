@@ -62,23 +62,6 @@ public class Main {
         return result;
     }
 
-    public static void zweierKomplement(byte[] input, boolean minusOrPlus){
-        byte[] result = {};
-
-        if(minusOrPlus){
-            result[0] = 0;
-        }
-
-        int i = 1;
-        for(byte a : input){
-            if(a == 0)
-                a = 1;
-            else
-                a = 0;
-            result[i] = a;
-        }
-    }
-
     public static void main(String[] args) {
         // System.out.println(dezInBin(75, 2));
         // byte[] a = {1,0,1};

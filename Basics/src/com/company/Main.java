@@ -1,26 +1,24 @@
 package com.company;
 
-import com.sun.deploy.util.StringUtils;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Main {
-    public static List<Integer> dezInBin(int input, int devisor){
+    public static List<Integer> dezInBin(int input, int divisor){
         int a = input;
         int result;
         List<Integer> resultArray = new ArrayList<>();
 
-        if(devisor > input){
-            input = devisor;
-            devisor = a;
+        if(divisor > input){
+            input = divisor;
+            divisor = a;
         }
 
         do{
-            result = input % devisor;
+            result = input % divisor;
             resultArray.add(result);
-            input = input / devisor;
+            input = input / divisor;
 
         }while(input != 0);
 
@@ -65,13 +63,14 @@ public class Main {
     }
 
     public static byte[] dezToBinFloat(float input){
-       int whole =
+        int whole =
+        return null;
     }
 
     public static void main(String[] args) {
 //        System.out.println(dezInBin(75, 16));
 //        byte[] a = {1,0,1};
 //        System.out.println(binInDez(a));
-        System.out.println(dezInHexa(100000));
+        System.out.println(dezInHexa(200));
     }
 }

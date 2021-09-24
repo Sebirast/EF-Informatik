@@ -5,6 +5,15 @@ import java.util.Collections;
 import java.util.List;
 
 public class Main {
+
+    public static char[] hexCharacters = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
+
+    public static enum toNumberSystem{
+        toDez,
+        toBin,
+        toHex
+    }
+
     public static List<Integer> dezInBin(int input, int divisor){
         int a = input;
         int result;
@@ -32,7 +41,6 @@ public class Main {
         int interResult;
         String result = "";
 
-        char[] hexCharacters = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
         if(devisor > input){
             return String.valueOf(hexCharacters[input]);
@@ -50,7 +58,7 @@ public class Main {
         return output.toString();
     }
 
-    public static int binInDez(byte[] input){
+    public static int binToDez(byte[] input){
         int result = 0;
 
         for(int i = input.length; i > 0; i--){
@@ -58,19 +66,24 @@ public class Main {
                 result += Math.pow(2, i-1);
             }
         }
-
         return result;
     }
 
-    public static byte[] dezToBinFloat(float input){
-        int whole =
-        return null;
+    public static int HexToDez(String input){
+        int result = 0;
+        char[] chars = input.toCharArray();
+        System.out.println((int)chars[0]);
+
+        for(char a : chars){
+        }
+
+        return 0;
     }
 
     public static void main(String[] args) {
 //        System.out.println(dezInBin(75, 16));
 //        byte[] a = {1,0,1};
 //        System.out.println(binInDez(a));
-        System.out.println(dezInHexa(200));
+        HexToDez("200");
     }
 }

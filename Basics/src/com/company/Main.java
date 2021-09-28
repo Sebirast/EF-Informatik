@@ -70,20 +70,20 @@ public class Main {
     }
 
     public static int HexToDez(String input){
+        String digits = "0123456789ABCDEF";
+        input = input.toUpperCase();
         int result = 0;
-        char[] chars = input.toCharArray();
-        System.out.println((int)chars[0]);
 
-        for(char a : chars){
+        for(int i = 0; i < input.length(); i++){
+            char c = input.charAt(i);
+            int d = digits.indexOf(c);
+            result = 16 * result + d;
         }
 
-        return 0;
+        return result;
     }
 
     public static void main(String[] args) {
-//        System.out.println(dezInBin(75, 16));
-//        byte[] a = {1,0,1};
-//        System.out.println(binInDez(a));
-        HexToDez("200");
+        System.out.println(HexToDez("20"));
     }
 }
